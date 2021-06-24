@@ -19,4 +19,15 @@ public class ScreenSizePlugin extends Plugin {
         ret.put("value", implementation.echo(value));
         call.resolve(ret);
     }
+
+    @PluginMethod
+    public void getDeviceDPI(PluginCall call) {
+      DisplayMetrics displayMetrics = this.getActivity().getResources().getDisplayMetrics();
+
+      JSObject ret = new JSObject();
+      ret.put("xdpi", displayMetrics.xdpi);
+      ret.put("ydpi", displayMetrics.ydpi);
+
+      call.resolve(ret);
+    }
 }
