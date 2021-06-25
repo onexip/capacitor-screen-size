@@ -29,10 +29,13 @@ public class ScreenSizePlugin: CAPPlugin {
                 return bestGuessPpi
             }
         }()
-        print("#### Plugin - Device PPI: ", ppi)
+        
+        let ppiString = String(ppi)
+        
+        print("#### Plugin - Device PPI: ", ppiString)
 
-        call.success([
-            "ppi": ppi
+        call.resolve([
+            "ppi": ppiString
         ])
     }
 }

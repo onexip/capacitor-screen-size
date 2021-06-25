@@ -22,13 +22,20 @@ public class ScreenSizePlugin extends Plugin {
     }
 
     @PluginMethod
-    public void getDeviceDPI(PluginCall call) {
+    public void getDevicePPI(PluginCall call) {
       DisplayMetrics displayMetrics = this.getActivity().getResources().getDisplayMetrics();
 
+      String xdpi = Float.toString(displayMetrics.xdpi);
+      String ydpi = Float.toString(displayMetrics.ydpi);
+
       JSObject ret = new JSObject();
-      ret.put("xdpi", displayMetrics.xdpi);
-      ret.put("ydpi", displayMetrics.ydpi);
+      ret.put("xdpi", xdpi);
+      ret.put("ydpi", ydpi);
+
+      //System.out.println("#### ret: " + ret.getString("xdpi") + ", " + ret.getString("ydpi"));
 
       call.resolve(ret);
+
     }
+
 }

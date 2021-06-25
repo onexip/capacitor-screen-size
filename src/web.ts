@@ -9,19 +9,11 @@ export class ScreenSizeWeb extends WebPlugin implements ScreenSizePlugin {
     return options;
   }
 
-  async getDevicePPI(): Promise<{ ppi: number }> {
-    console.log('(web) getDevicePPI:');
+  async getDevicePPI(): Promise<{ density: string }> {
+    console.log('(web) getDevicePPI: not implemented for web');
     return {
-      ppi: 0.0
+      density: '0.0'
     };
-  }
-
-  async getDeviceDPI(): Promise<{ xdpi: number; ydpi: number }> {
-    console.log('(web) getDeviceDPI:');
-    return {
-      xdpi: 0.0,
-      ydpi: 0.0
-    }
   }
 
 }
