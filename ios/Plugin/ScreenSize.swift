@@ -2,9 +2,6 @@ import Foundation
 import DevicePpi
 
 @objc public class ScreenSize: NSObject {
-    @objc public func echo(_ value: String) -> String {
-        return value
-    }
 
     @objc public func getDevicePPI() -> Double  {
         let ppi: Double = {

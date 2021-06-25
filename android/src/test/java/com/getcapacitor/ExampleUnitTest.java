@@ -15,4 +15,13 @@ public class ExampleUnitTest {
     public void addition_isCorrect() throws Exception {
         assertEquals(4, 2 + 2);
     }
+
+    @Test
+    public void getDevicePPI_isNotNull() throws Exception {
+
+        ScreenSize screenSize = new ScreenSize();
+        String result = screenSize.getDevicePPI();
+
+        assertNotNull(result);
+    }
 }
