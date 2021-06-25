@@ -47,5 +47,3 @@ getDevicePPI() => any
 --------------------
 
 </docgen-api>
-
-# capacitor-screen-size
