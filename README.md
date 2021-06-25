@@ -15,7 +15,6 @@ npx cap sync
 
 * [`echo(...)`](#echo)
 * [`getDevicePPI()`](#getdeviceppi)
-* [`getDeviceDPI()`](#getdevicedpi)
 
 </docgen-index>
 
@@ -41,17 +40,6 @@ echo(options: { value: string; }) => any
 
 ```typescript
 getDevicePPI() => any
-```
-
-**Returns:** <code>any</code>
-
---------------------
-
-
-### getDeviceDPI()
-
-```typescript
-getDeviceDPI() => any
 ```
 
 **Returns:** <code>any</code>
