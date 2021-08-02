@@ -22,13 +22,19 @@ public class ScreenSizePlugin: CAPPlugin {
                 return bestGuessPpi
             }
         }()
+
+        // get native scale factor from iOS device 
+        let scale = UIScreen.main.nativeScale
         
         let ppiString = String(ppi)
+        let scaleString = "\(scale)"
+
         
         print("#### Plugin - Device PPI: ", ppiString)
 
         call.resolve([
-            "ppi": ppiString
+            "density": ppiString,
+            "scaleFactor": scaleString
         ])
     }
 }

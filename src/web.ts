@@ -4,10 +4,11 @@ import type { ScreenSizePlugin } from './definitions';
 
 export class ScreenSizeWeb extends WebPlugin implements ScreenSizePlugin {
 
-  async getDevicePPI(): Promise<{ density: string }> {
+  async getDevicePPI(): Promise<{ density: string, scaleFactor: string }> {
     console.log('Accessing the PPI is not supported within a browser (web)!');
     return {
-      density: '0.0'
+      density: '0.0',
+      scaleFactor: '1.0'
     };
   }
 

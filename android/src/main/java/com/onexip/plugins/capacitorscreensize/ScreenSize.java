@@ -1,7 +1,7 @@
 package com.onexip.plugins.capacitorscreensize;
 
 public class ScreenSize {
-
+/*
     public JSObject getDevicePPI() {
       DisplayMetrics displayMetrics = this.getActivity().getResources().getDisplayMetrics();
 
@@ -15,4 +15,6 @@ public class ScreenSize {
       return ret;
 
     }
+
+ */
 }

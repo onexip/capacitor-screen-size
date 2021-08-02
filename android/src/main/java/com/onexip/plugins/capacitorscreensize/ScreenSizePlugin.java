@@ -16,14 +16,18 @@ public class ScreenSizePlugin extends Plugin {
     public void getDevicePPI(PluginCall call) {
       DisplayMetrics displayMetrics = this.getActivity().getResources().getDisplayMetrics();
 
-      String xdpi = Float.toString(displayMetrics.xdpi);
+      //String density = Float.toString(displayMetrics.density);
+      float density = displayMetrics.density;
       String ydpi = Float.toString(displayMetrics.ydpi);
 
-      JSObject ret = new JSObject();
-      ret.put("xdpi", xdpi);
-      ret.put("ydpi", ydpi);
+      float scale = density / 160;
+      
 
-      //System.out.println("#### ret: " + ret.getString("xdpi") + ", " + ret.getString("ydpi"));
+      JSObject ret = new JSObject();
+      ret.put("density", ydpi);
+      ret.put("scaleFactor", scale);
+
+      System.out.println("#### density: " + ret.getString("density") + ", scaleFactor: " + ret.getString("scaleFactor"));
 
       call.resolve(ret);
 
