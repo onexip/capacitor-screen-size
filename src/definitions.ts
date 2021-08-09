@@ -1,3 +1,3 @@
 export interface ScreenSizePlugin {
-  getDevicePPI(): Promise<{ density: string, scaleFactor: string }>;
+  getDevicePPI(): Promise<{ density: number, scaleFactor: number }>;
 }
