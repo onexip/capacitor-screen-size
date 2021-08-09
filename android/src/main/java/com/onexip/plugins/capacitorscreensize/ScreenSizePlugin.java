@@ -15,15 +15,13 @@ public class ScreenSizePlugin extends Plugin {
     @PluginMethod
     public void getDevicePPI(PluginCall call) {
       DisplayMetrics displayMetrics = this.getActivity().getResources().getDisplayMetrics();
-
-      String xdpi = Float.toString(displayMetrics.xdpi);
-      String ydpi = Float.toString(displayMetrics.ydpi);
+      
+      float density = displayMetrics.density;
+      float ydpi = displayMetrics.ydpi;
 
       JSObject ret = new JSObject();
-      ret.put("xdpi", xdpi);
-      ret.put("ydpi", ydpi);
-
-      //System.out.println("#### ret: " + ret.getString("xdpi") + ", " + ret.getString("ydpi"));
+      ret.put("density", ydpi);
+      ret.put("scaleFactor", density);
 
       call.resolve(ret);
 
