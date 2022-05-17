@@ -9,7 +9,7 @@ import DevicePpi
 @objc(ScreenSizePlugin)
 public class ScreenSizePlugin: CAPPlugin {
     private let implementation = ScreenSize()
-
+    
     @objc func getDevicePPI(_ call: CAPPluginCall) {
         let ppi: Double = {
             switch Ppi.get() {

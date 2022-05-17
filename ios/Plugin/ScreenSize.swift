@@ -3,7 +3,7 @@ import DevicePpi
 
 @objc public class ScreenSize: NSObject {
 
-    @objc public func getDevicePPI() -> Double  {
+    @objc public func getPPIFromLookupTable() -> Double  {
         let ppi: Double = {
             switch Ppi.get() {
             case .success(let ppi):
@@ -15,9 +15,6 @@ import DevicePpi
                 return bestGuessPpi
             }
         }()
-        print("#### Plugin - Device PPI: ", ppi)
-
         return ppi
-
     }
 }
