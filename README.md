@@ -1,6 +1,8 @@
 # capacitor-screen-size
 
-Get pixel density of iOS and Android devices
+Get pixel density of iOS and Android devices.
+The Android implementation utilizes the DisplayMetrics API to get the density and the native scale.
+The iOS implementation uses either a look-up table by ... or an approximated calculation to get the pixel density of the device.
 
 ## Install
 
@@ -23,10 +25,10 @@ npx cap sync
 ### getDevicePPI()
 
 ```typescript
-getDevicePPI() => any
+getDevicePPI() => Promise<{ density: number; scaleFactor: number; }>
 ```
 
-**Returns:** <code>any</code>
+**Returns:** <code>Promise&lt;{ density: number; scaleFactor: number; }&gt;</code>
 
 --------------------
 
