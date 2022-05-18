@@ -25,10 +25,10 @@ npx cap sync
 ### getDevicePPI()
 
 ```typescript
-getDevicePPI() => Promise<{ density: number; scaleFactor: number; identifier: string; tableIdentifier: string; }>
+getDevicePPI() => Promise<{ density: number; scaleFactor: number; }>
 ```
 
-**Returns:** <code>Promise&lt;{ density: number; scaleFactor: number; identifier: string; tableIdentifier: string; }&gt;</code>
+**Returns:** <code>Promise&lt;{ density: number; scaleFactor: number; }&gt;</code>
 
 --------------------
 
